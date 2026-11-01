@@ -17,9 +17,10 @@ export function SoftwarePath() {
         <SectionHeading eyebrow="Projects" title="Software I have built." lede="Real apps with code you can read." />
         <div className="grid gap-5 sm:grid-cols-2">
           {softwareProjects.map((p, i) => (
-            <Reveal key={p.name} delay={i * 0.06}>
-              <div className="flex h-full flex-col rounded-2xl border border-[var(--border)] bg-[var(--surface)]/60 p-6 card-hover">
-                <h3 className="font-medium text-[var(--text)]">{p.name}</h3>
+            <Reveal key={p.name} delay={i * 0.06} className={p.featured ? "sm:col-span-2" : ""}>
+              <div className={`flex h-full flex-col rounded-2xl border p-6 card-hover ${p.featured ? "border-[var(--signal)] bg-[var(--surface)]" : "border-[var(--border)] bg-[var(--surface)]/60"}`}>
+                {p.featured && <span className="mb-3 self-start text-xs px-2.5 py-1 rounded-full bg-[var(--signal)] text-[var(--bg)] font-medium">Featured project</span>}
+                <h3 className={`font-medium text-[var(--text)] ${p.featured ? "text-xl" : ""}`}>{p.name}</h3>
                 <p className="mt-2 text-sm text-[var(--text-dim)] leading-relaxed">{p.description}</p>
                 <ul className="mt-4 space-y-1.5 text-sm text-[var(--text-dim)] list-disc pl-5">
                   {p.features.map((f) => <li key={f}>{f}</li>)}

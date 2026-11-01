@@ -162,24 +162,6 @@ export const projects = [
     demo: null,
     featured: false,
   },
-  {
-    slug: "analyst-internship",
-    title: "Data Analyst Internship Project",
-    summary:
-      "Six tasks covering data science fundamentals, a hands-on lab, a real-world dataset analysis, tool mastery, business analytics reporting and a final capstone.",
-    problem: "Show a full analyst workflow across several datasets, from fundamentals to a capstone.",
-    solution:
-      "One runnable Python script per task, each producing its own charts and results file, using public Titanic, tips, taxis and diamonds datasets.",
-    features: [
-      "Runnable script for every task",
-      "Charts and result files used in the written reports",
-    ],
-    metrics: [{ label: "Tasks", value: "6" }],
-    stack: ["Python", "Data analysis", "Visualisation"],
-    github: "https://github.com/HarshAntil2004/Data-Analyst-Intern-Project",
-    demo: null,
-    featured: false,
-  },
 ];
 
 export const research = {
@@ -286,6 +268,19 @@ export const notes = [
 
 export const softwareProjects = [
   {
+    name: "Blockchain AML Monitoring Platform",
+    description:
+      "A major project that analyses simulated blockchain transactions with rule-based logic to flag money laundering patterns and generate investigation reports.",
+    features: [
+      "Detects transaction rings and layering patterns",
+      "Automatically generates Suspicious Activity Reports (SARs)",
+    ],
+    stack: ["Python", "Rule-based logic", "Blockchain"],
+    featured: true,
+    github: "https://github.com/HarshAntil2004/AML-Anti-Money-laundering-Blockchain-Transaction-Monitoring-Investigation-Platform",
+    demo: null as string | null,
+  },
+  {
     name: "Lucknow Public Library Management System",
     description:
       "A junior software engineer internship project: a transactional lending system for a fictional three-branch library network.",
@@ -308,18 +303,6 @@ export const softwareProjects = [
     ],
     stack: ["Kotlin", "Android SDK", "Room"],
     github: "https://github.com/HarshAntil2004/Workout-App",
-    demo: null as string | null,
-  },
-  {
-    name: "Blockchain AML Monitoring Platform",
-    description:
-      "A major project that analyses simulated blockchain transactions with rule-based logic to flag money laundering patterns and generate investigation reports.",
-    features: [
-      "Detects transaction rings and layering patterns",
-      "Automatically generates Suspicious Activity Reports (SARs)",
-    ],
-    stack: ["Python", "Rule-based logic", "Blockchain"],
-    github: "https://github.com/HarshAntil2004/AML-Anti-Money-laundering-Blockchain-Transaction-Monitoring-Investigation-Platform",
     demo: null as string | null,
   },
   {
@@ -400,5 +383,19 @@ export const softwareInternships = [
       "Covered the rules with automated tests using pytest.",
     ],
     stack: ["Python", "SQLite", "OOP", "pytest"],
+  },
+];
+
+export const softwareSimulations = [
+  {
+    org: "Wells Fargo",
+    role: "Software Engineering Job Simulation",
+    via: "Forage",
+    points: [
+      "Worked from requirements for a system that manages financial portfolios.",
+      "Worked out what data the system needed to track and drew it as an entity relationship diagram (ERD).",
+      "Implemented the ERD in IntelliJ with Java persistence and published the project to GitHub.",
+    ],
+    stack: ["Java", "Spring", "JPA", "Data modelling", "Database design"],
   },
 ];
