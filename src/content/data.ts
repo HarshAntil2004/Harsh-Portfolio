@@ -120,49 +120,6 @@ export const projects = [
     featured: true,
   },
   {
-    slug: "aml-blockchain",
-    title: "Blockchain-Based Money Laundering Detection System",
-    summary:
-      "Rule-based analysis of simulated blockchain transaction data to flag laundering patterns and auto-generate SAR reports.",
-    problem:
-      "Illicit blockchain activity like ring transactions and layering is hard to spot manually across large transaction graphs.",
-    solution:
-      "Built structured, rule-based logic to walk simulated transaction data and flag suspicious patterns automatically, closing the loop with generated Suspicious Activity Reports.",
-    features: [
-      "Detection of transaction rings",
-      "Detection of layering patterns",
-      "Automated SAR (Suspicious Activity Report) generation",
-    ],
-    metrics: [],
-    stack: ["Python", "Rule-based logic"],
-    github:
-      "https://github.com/HarshAntil2004/AML-Anti-Money-laundering-Blockchain-Transaction-Monitoring-Investigation-Platform",
-    demo: null,
-    featured: true,
-  },
-  {
-    slug: "stock-market-prediction",
-    title: "Stock Market Prediction Model",
-    summary:
-      "Academic project applying machine learning techniques to historical stock market data to forecast price movement.",
-    problem:
-      "Raw historical price data is noisy and non-stationary — turning it into a usable predictive signal requires careful preprocessing before any model can be trusted.",
-    solution:
-      "Applied structured preprocessing and exploratory visual analysis to historical market data, then trained and evaluated ML models to forecast movement, comparing results against baseline approaches.",
-    features: [
-      "Historical stock data preprocessing and cleaning",
-      "Exploratory visual analysis before modelling",
-      "ML-based price movement forecasting",
-      "Compared multiple ML models plus an LSTM deep learning model",
-      "Interactive Streamlit dashboard for exploring forecasts",
-    ],
-    metrics: [],
-    stack: ["Python", "Machine Learning", "LSTM", "Streamlit"],
-    github: "https://github.com/HarshAntil2004/Stock-Market-Prediction-model",
-    demo: null,
-    featured: false,
-  },
-  {
     slug: "superstore-analysis",
     title: "Superstore Business Analysis",
     summary:
@@ -354,13 +311,28 @@ export const softwareProjects = [
     demo: null as string | null,
   },
   {
-    name: "This portfolio",
+    name: "Blockchain AML Monitoring Platform",
     description:
-      "The site you are on: a Next.js app with all content kept in one typed file, deployed on Vercel.",
-    features: ["Two career paths on one site", "Dark and light themes"],
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/HarshAntil2004/Harsh-Portfolio",
-    demo: "https://harsh-portfolio-seven-drab.vercel.app" as string | null,
+      "A major project that analyses simulated blockchain transactions with rule-based logic to flag money laundering patterns and generate investigation reports.",
+    features: [
+      "Detects transaction rings and layering patterns",
+      "Automatically generates Suspicious Activity Reports (SARs)",
+    ],
+    stack: ["Python", "Rule-based logic", "Blockchain"],
+    github: "https://github.com/HarshAntil2004/AML-Anti-Money-laundering-Blockchain-Transaction-Monitoring-Investigation-Platform",
+    demo: null as string | null,
+  },
+  {
+    name: "Stock Market Prediction System",
+    description:
+      "A complete Python system that downloads historical stock data, engineers technical indicators and forecasts prices with ML models and an LSTM network.",
+    features: [
+      "Compares several machine learning models against an LSTM deep learning model",
+      "Interactive Streamlit dashboard for exploring forecasts",
+    ],
+    stack: ["Python", "Machine Learning", "LSTM", "Streamlit"],
+    github: "https://github.com/HarshAntil2004/Stock-Market-Prediction-model",
+    demo: null as string | null,
   },
 ];
 
@@ -376,8 +348,57 @@ export const softwareLearning = [
     github: null as string | null,
   },
   {
-    title: "Modern web development",
-    body: "Going deeper into Next.js, TypeScript and Tailwind CSS by building and shipping this site.",
-    github: "https://github.com/HarshAntil2004/Harsh-Portfolio" as string | null,
+    title: "Databases and SQL",
+    body: "Going deeper into relational design, transactions and migrations, building on the library system.",
+    github: null as string | null,
+  },
+  {
+    title: "Testing and clean design",
+    body: "Practising automated tests, layered architecture and design patterns for code that is easy to change.",
+    github: null as string | null,
+  },
+];
+
+const internVia = "Virtual internship";
+
+export const dataInternships = [
+  {
+    org: "YuvaIntern",
+    role: "Logistics Data Analyst Intern",
+    via: internVia,
+    points: [
+      "Planned a logistics analytics project: defined the scenario, chose KPIs and mapped an end-to-end Python workflow.",
+      "Documented a data cleaning pipeline covering missing values, outliers and normalisation, with pandas code.",
+      "Explored delivery times, shipment volumes and costs, and visualised them to surface bottlenecks.",
+      "Designed a predictive model for a logistics metric, evaluated it with RMSE, MAE and R-squared, and recommended optimisations.",
+    ],
+    stack: ["Python", "Pandas", "Data visualisation", "Predictive modelling"],
+  },
+  {
+    org: "YuvaIntern",
+    role: "Junior Business Analyst Intern",
+    via: internVia,
+    points: [
+      "Cleaned public business data and identified trends, then reported them with charts and actionable insights.",
+      "Simulated stakeholder interviews and turned them into a structured requirements document.",
+      "Mapped a business process end to end, found bottlenecks and proposed optimisations.",
+      "Ran a competitor and market trend analysis, built a SWOT-based strategy and presented it as a final deck and report.",
+    ],
+    stack: ["Business analysis", "Requirements", "Process mapping", "SWOT", "Presentations"],
+  },
+];
+
+export const softwareInternships = [
+  {
+    org: "YuvaIntern",
+    role: "Junior Software Developer Intern",
+    via: internVia,
+    points: [
+      "Built a library management system in Python with a relational database, seeded with 2,000 books, 500 members and a year of loan history.",
+      "Used a layered design: domain classes, a repository layer for data access and a service layer for business rules.",
+      "Enforced lending rules such as tier limits, blocking unpaid fines and protecting reserved copies, using transactions and migration scripts.",
+      "Covered the rules with automated tests using pytest.",
+    ],
+    stack: ["Python", "SQLite", "OOP", "pytest"],
   },
 ];

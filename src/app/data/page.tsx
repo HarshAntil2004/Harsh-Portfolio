@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { Experience } from "@/components/Experience";
+import { dataInternships } from "@/content/data";
 import { Projects } from "@/components/Projects";
 import { SideProjects } from "@/components/SideProjects";
 import { Credentials } from "@/components/Credentials";
@@ -22,6 +23,7 @@ export default function DataPath() {
         <About />
         <Projects />
         <SideProjects />
+        <Experience items={dataInternships} id="internships" eyebrow="Internships" title="Virtual internships." lede="Structured analyst work across logistics and business problems." />
         <Experience />
         <Skills />
         <Credentials />

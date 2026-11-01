@@ -15,7 +15,7 @@ export function SoftwarePath() {
       </section>
       <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeading eyebrow="Projects" title="Software I have built." lede="Real apps with code you can read." />
-        <div className="grid gap-5 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2">
           {softwareProjects.map((p, i) => (
             <Reveal key={p.name} delay={i * 0.06}>
               <div className="flex h-full flex-col rounded-2xl border border-[var(--border)] bg-[var(--surface)]/60 p-6 card-hover">
@@ -46,7 +46,7 @@ export function SoftwareLearning() {
   return (
     <section id="learning" className="mx-auto max-w-6xl px-6 py-20">
       <SectionHeading eyebrow="Learning in progress" title="What I am working on next." lede="Skills I am actively building, shown honestly." />
-      <div className="grid gap-5 sm:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2">
         {softwareLearning.map((l, i) => (
           <Reveal key={l.title} delay={i * 0.06}>
             <div className="h-full rounded-2xl border border-dashed border-[var(--signal-dim)] p-6">

@@ -1,27 +1,35 @@
 import { Reveal, SectionHeading } from "./Reveal";
 import { experience } from "@/content/data";
 
-export function Experience() {
+type Item = { org: string; role: string; via: string; date?: string; points: string[]; stack: string[] };
+
+export function Experience({
+  items = experience,
+  id = "experience",
+  eyebrow = "Experience",
+  title = "Where I've applied it.",
+  lede = "Job simulations run to the same brief as real analyst work: ambiguous data in, a specific recommendation out.",
+}: { items?: Item[]; id?: string; eyebrow?: string; title?: string; lede?: string }) {
   return (
-    <section id="experience" className="relative mx-auto max-w-6xl px-6 py-28">
+    <section id={id} className="relative mx-auto max-w-6xl px-6 py-28">
       <SectionHeading
-        eyebrow="Experience"
-        title="Where I've applied it."
-        lede="Job simulations run to the same brief as real analyst work: ambiguous data in, a specific recommendation out."
+        eyebrow={eyebrow}
+        title={title}
+        lede={lede}
       />
 
       <div className="relative">
         <div className="absolute left-[7px] top-2 bottom-2 w-px bg-[var(--border)]" aria-hidden />
         <div className="space-y-12">
-          {experience.map((job, i) => (
-            <Reveal key={job.org} delay={i * 0.08}>
+          {items.map((job, i) => (
+            <Reveal key={job.role} delay={i * 0.08}>
               <div className="relative pl-10">
                 <span className="absolute left-0 top-1.5 h-3.5 w-3.5 rounded-full bg-[var(--signal)] ring-4 ring-[var(--bg)]" />
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                   <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-[var(--text)]">
                     {job.role}
                   </h3>
-                  <span className="mono-eyebrow !mb-0">{job.date}</span>
+                  {job.date && <span className="mono-eyebrow !mb-0">{job.date}</span>}
                 </div>
                 <div className="text-sm text-[var(--signal)] mt-1">
                   {job.org} <span className="text-[var(--text-faint)]">· via {job.via}</span>
