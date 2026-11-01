@@ -5,15 +5,16 @@ import { ThemeToggle } from "./ThemeToggle";
 import { profile } from "@/content/data";
 import { Menu, X } from "lucide-react";
 
-const links = [
+const defaultLinks = [
   { href: "#about", label: "About" },
   { href: "#work", label: "Work" },
   { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
+  { href: "/software", label: "Software path →" },
 ];
 
-export function Nav() {
+export function Nav({ links = defaultLinks }: { links?: { href: string; label: string }[] }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -32,10 +33,10 @@ export function Nav() {
     >
       <nav className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         <a
-          href="#top"
+          href="/"
           className="font-[family-name:var(--font-mono)] text-sm tracking-tight text-[var(--text)]"
         >
-          harsh<span className="text-[var(--signal)]">.</span>antil
+          harsh<span className="text-[var(--signal)]">.</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">

@@ -2,7 +2,7 @@
 // Add new items to these arrays — sections render dynamically, no layout changes needed.
 
 export const profile = {
-  name: "Harsh Antil",
+  name: "Harsh",
   role: "Data Analyst",
   tagline: "I turn raw, messy data into decisions people can act on.",
   location: "Sonipat, Haryana, India",
@@ -153,29 +153,73 @@ export const projects = [
       "Historical stock data preprocessing and cleaning",
       "Exploratory visual analysis before modelling",
       "ML-based price movement forecasting",
+      "Compared multiple ML models plus an LSTM deep learning model",
+      "Interactive Streamlit dashboard for exploring forecasts",
     ],
     metrics: [],
-    stack: ["Python", "Machine Learning"],
+    stack: ["Python", "Machine Learning", "LSTM", "Streamlit"],
     github: "https://github.com/HarshAntil2004/Stock-Market-Prediction-model",
     demo: null,
     featured: false,
   },
   {
-    slug: "workout-app",
-    title: "Workout App",
+    slug: "superstore-analysis",
+    title: "Superstore Business Analysis",
     summary:
-      "Academic Android project — a workout tracking app built in Kotlin.",
-    problem:
-      "Manually tracking workouts (sets, reps, progress over time) across paper notes or generic notes apps is disorganised and easy to abandon.",
+      "A six-week junior business analyst project that follows one retail business from raw data to a strategy recommendation.",
+    problem: "Sales were growing, so why did profit feel flat?",
     solution:
-      "Built a native Android app in Kotlin for logging and tracking workouts, giving a dedicated, structured interface rather than a generic notes workaround.",
+      "Analysed four years of order data to find where margin was being lost, then turned the findings into a strategy recommendation.",
     features: [
-      "Native Android app built in Kotlin",
-      "Structured workout logging",
+      "Sales grew 56% from 2016 to 2018, but margin stayed around 13%",
+      "Order lines discounted by more than 20% lost about $135K, while full-price lines earned a 30% margin",
+      "Furniture (2.5% margin) and the Central region (5.1% margin in 2018) were the weakest spots",
+    ],
+    metrics: [
+      { label: "Order lines", value: "9,994" },
+      { label: "Orders", value: "5,009" },
+      { label: "Customers", value: "793" },
+      { label: "Profit margin", value: "12.5%" },
+    ],
+    stack: ["Python", "Business analysis"],
+    github: "https://github.com/HarshAntil2004/Superstone-Business-analysis-",
+    demo: null,
+    featured: true,
+  },
+  {
+    slug: "retailpulse",
+    title: "RetailPulse E-commerce Analytics",
+    summary:
+      "An end-to-end case study taking messy e-commerce order data through cleaning, SQL analysis and EDA to business insights.",
+    problem:
+      "Leadership at a fictional Indian online retailer wanted to know what drives revenue, which customers and products matter most, and where to focus retention and marketing spend.",
+    solution:
+      "Cleaned the raw order data, analysed it with SQL, explored it visually and wrote up the insights for the business.",
+    features: [
+      "Six product categories: Electronics, Fashion, Home & Kitchen, Beauty, Sports and Grocery",
+      "Raw data to cleaned data to SQL analysis to EDA to insights",
     ],
     metrics: [],
-    stack: ["Kotlin", "Android"],
-    github: "https://github.com/HarshAntil2004/Workout-App",
+    stack: ["Python", "SQL", "EDA"],
+    github: "https://github.com/HarshAntil2004/Ecommerce-Analytics-Project",
+    demo: null,
+    featured: false,
+  },
+  {
+    slug: "analyst-internship",
+    title: "Data Analyst Internship Project",
+    summary:
+      "Six tasks covering data science fundamentals, a hands-on lab, a real-world dataset analysis, tool mastery, business analytics reporting and a final capstone.",
+    problem: "Show a full analyst workflow across several datasets, from fundamentals to a capstone.",
+    solution:
+      "One runnable Python script per task, each producing its own charts and results file, using public Titanic, tips, taxis and diamonds datasets.",
+    features: [
+      "Runnable script for every task",
+      "Charts and result files used in the written reports",
+    ],
+    metrics: [{ label: "Tasks", value: "6" }],
+    stack: ["Python", "Data analysis", "Visualisation"],
+    github: "https://github.com/HarshAntil2004/Data-Analyst-Intern-Project",
     demo: null,
     featured: false,
   },
@@ -264,7 +308,7 @@ export const vibeCodedProjects = [
   {
     name: "Excel Master Academy",
     description:
-      "A learning-focused build for practicing and demonstrating Excel skills and workflows.",
+      "An interactive Excel learning platform in React: a live spreadsheet simulator, a 16-level roadmap and a practice engine for formulas.",
     stack: ["Vibe-coded"],
     github: "https://github.com/HarshAntil2004/Excel-Master-Academy-Vibe-coded-",
   },
@@ -281,4 +325,59 @@ export const notes = [
   { title: "Pandas Quick Notes", file: "Pandas_Quick_Notes.pdf" },
   { title: "Python Quick Notes", file: "Python_Quick_Notes.pdf" },
   { title: "SQL Quick Notes", file: "SQL_Quick_Notes.pdf" },
+];
+
+export const softwareProjects = [
+  {
+    name: "Lucknow Public Library Management System",
+    description:
+      "A junior software engineer internship project: a transactional lending system for a fictional three-branch library network.",
+    features: [
+      "Books and copies, membership tiers, issue, return and renewal",
+      "Reservation queues and fines that handle Sundays, holidays, grace periods and caps",
+      "Tests written with pytest",
+    ],
+    stack: ["Python", "SQLite", "pytest"],
+    github: "https://github.com/HarshAntil2004/Lucknow-Library-Project",
+    demo: null as string | null,
+  },
+  {
+    name: "7-Minute Workout App",
+    description:
+      "A native Android app that guides you through a 7-minute workout with a timer, audio cues and exercise animations.",
+    features: [
+      "Room database that keeps your workout history",
+      "BMI calculator and customisable exercises",
+    ],
+    stack: ["Kotlin", "Android SDK", "Room"],
+    github: "https://github.com/HarshAntil2004/Workout-App",
+    demo: null as string | null,
+  },
+  {
+    name: "This portfolio",
+    description:
+      "The site you are on: a Next.js app with all content kept in one typed file, deployed on Vercel.",
+    features: ["Two career paths on one site", "Dark and light themes"],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/HarshAntil2004/Harsh-Portfolio",
+    demo: "https://harsh-portfolio-seven-drab.vercel.app" as string | null,
+  },
+];
+
+export const softwareLearning = [
+  {
+    title: "Python fundamentals",
+    body: "Revising core language concepts with short challenges and code for every topic.",
+    github: "https://github.com/HarshAntil2004/Python-Revision" as string | null,
+  },
+  {
+    title: "Data structures and algorithms",
+    body: "Building problem-solving fundamentals, backed by my own DSA and Python quick notes.",
+    github: null as string | null,
+  },
+  {
+    title: "Modern web development",
+    body: "Going deeper into Next.js, TypeScript and Tailwind CSS by building and shipping this site.",
+    github: "https://github.com/HarshAntil2004/Harsh-Portfolio" as string | null,
+  },
 ];

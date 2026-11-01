@@ -3,16 +3,16 @@ import "./globals.css";
 import { profile } from "@/content/data";
 
 export const metadata: Metadata = {
-  title: `${profile.name} — ${profile.role}`,
+  title: `${profile.name} — Portfolio`,
   description: profile.summary,
   openGraph: {
-    title: `${profile.name} — ${profile.role}`,
+    title: `${profile.name} — Portfolio`,
     description: profile.summary,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${profile.name} — ${profile.role}`,
+    title: `${profile.name} — Portfolio`,
     description: profile.summary,
   },
   robots: { index: true, follow: true },
