@@ -10,7 +10,6 @@ export const profile = {
   phone: "+91 99918 49373",
   github: "https://github.com/HarshAntil2004",
   linkedin: "https://www.linkedin.com/in/harsh-2004-sonipat/",
-  resumeUrl: "/Harsh_Antil_Resume.pdf",
   photoUrl: "https://avatars.githubusercontent.com/u/276988065?v=4",
   availability: "Open to Data / Business Analyst roles — Gurugram · Delhi · Noida · Remote",
   summary:
@@ -399,3 +398,10 @@ export const softwareSimulations = [
     stack: ["Java", "Spring", "JPA", "Data modelling", "Database design"],
   },
 ];
+
+// Two résumés, one per path. Files live in /public.
+// When the software résumé is ready: add public/Harsh_Resume_Software.pdf and set available to true.
+export const resumes = {
+  data: { url: "/Harsh_Resume_Data.pdf", available: true },
+  software: { url: "/Harsh_Resume_Software.pdf", available: false },
+};

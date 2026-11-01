@@ -114,10 +114,10 @@ To use a custom domain, add it under Project → Settings → Domains once
 deployed, and update the URLs in `src/app/sitemap.ts` and `src/app/robots.ts`
 to match.
 
-## Replacing the résumé file
+## Résumés (one per path)
 
-Drop your latest PDF at `public/Harsh_Antil_Resume.pdf` (same filename) or
-update `resumeUrl` in `data.ts` if you rename it.
+- Data path: replace `public/Harsh_Resume_Data.pdf` (same filename).
+- Software path: add `public/Harsh_Resume_Software.pdf`, then set `resumes.software.available` to `true` in `src/content/data.ts`. Until then the Résumé button is hidden on the software page.
 
 ## Scripts
 

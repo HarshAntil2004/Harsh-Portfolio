@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
-import { profile } from "@/content/data";
+import { profile, resumes } from "@/content/data";
 import { Menu, X } from "lucide-react";
 
 const defaultLinks = [
@@ -14,7 +14,13 @@ const defaultLinks = [
   { href: "/software", label: "Software path →" },
 ];
 
-export function Nav({ links = defaultLinks }: { links?: { href: string; label: string }[] }) {
+export function Nav({
+  links = defaultLinks,
+  resume = resumes.data.url,
+}: {
+  links?: { href: string; label: string }[];
+  resume?: string | null;
+}) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -52,13 +58,15 @@ export function Nav({ links = defaultLinks }: { links?: { href: string; label: s
         </div>
 
         <div className="flex items-center gap-3">
+          {resume && (
           <a
-            href={profile.resumeUrl}
+            href={resume}
             download
             className="hidden sm:inline-flex text-sm px-4 py-2 rounded-full border border-[var(--border)] text-[var(--text)] hover:border-[var(--signal-dim)] hover:text-[var(--signal)] transition-colors"
           >
             Résumé
           </a>
+          )}
           <ThemeToggle />
           <button
             onClick={() => setOpen((o) => !o)}

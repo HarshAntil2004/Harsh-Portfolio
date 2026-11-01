@@ -2,7 +2,7 @@ import { Nav } from "@/components/Nav";
 import { SoftwarePath, SoftwareLearning } from "@/components/SoftwarePath";
 import { VibeCoded } from "@/components/VibeCoded";
 import { Experience } from "@/components/Experience";
-import { softwareInternships, softwareSimulations } from "@/content/data";
+import { resumes, softwareInternships, softwareSimulations } from "@/content/data";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
@@ -20,7 +20,7 @@ export default function SoftwareRoute() {
   return (
     <>
       <ScrollProgress />
-      <Nav links={links} />
+      <Nav links={links} resume={resumes.software.available ? resumes.software.url : null} />
       <main>
         <SoftwarePath />
         <Experience items={[...softwareInternships, ...softwareSimulations]} id="internship" eyebrow="Experience" title="Internship and job simulation." lede="Building real systems end to end, from data model to tests." />
