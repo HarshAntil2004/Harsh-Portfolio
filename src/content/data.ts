@@ -93,6 +93,58 @@ export const experience = [
 
 export const projects = [
   {
+    slug: "telco-churn-analysis",
+    title: "Telecom Customer Churn Analysis",
+    summary:
+      "Where is a telecom business losing customers and revenue? SQL segmentation, statistical tests and a churn-risk model on 7,043 customers, ending in a ranked retention plan.",
+    problem:
+      "26.5% of customers churned, taking about $139K of monthly revenue with them. The retention team needed to know who is leaving, why, and where to focus first.",
+    solution:
+      "Cleaned the data in pandas, loaded it into SQLite and answered nine business questions with SQL (CTEs, window functions). Confirmed the drivers with chi-square tests and Cramer's V, then built a logistic regression model that ranks customers by churn risk and turned it into a dollar estimate.",
+    features: [
+      "Month-to-month fiber customers are 30% of the base but account for 72% of lost revenue",
+      "Month-to-month contracts churn 15x more than two-year contracts (42.7% vs 2.8%)",
+      "Churn model with AUC 0.85 and 80% recall. Contacting the riskiest 30% of customers reaches 67% of churners",
+      "Saving 15% of the at-risk segment is worth about $181K a year (assumption stated in the repo)",
+    ],
+    metrics: [
+      { label: "Customers analysed", value: "7,043" },
+      { label: "Churn rate", value: "26.5%" },
+      { label: "SQL queries written", value: "9" },
+      { label: "Model AUC", value: "0.85" },
+    ],
+    stack: ["Python", "Pandas", "SQL", "scikit-learn", "Tableau"],
+    github: "https://github.com/HarshAntil2004/Telco-Churn-Analysis",
+    demo: null,
+    featured: true,
+  },
+  {
+    slug: "credit-card-fraud-analysis",
+    title: "Credit Card Fraud Detection and Risk Analysis",
+    summary:
+      "Where does card fraud happen and what is the cheapest way to catch it? SQL, anomaly detection and a fraud model with a time-based split and a threshold chosen by business value. Built on synthetic transactions, which the repo states clearly.",
+    problem:
+      "Fraud was 1.26% of transactions but 4.4% of spend. A card issuer needs to catch as much of it as possible without flooding genuine customers with false alarms.",
+    solution:
+      "Generated a reproducible synthetic card dataset with realistic fraud behaviour, cleaned it, and analysed it with 11 SQL queries. Compared four rule-based anomaly methods, then trained logistic regression and gradient boosting on Jan-Aug, validated on Sep and tested on Oct-Dec. Chose the alert threshold by net dollar savings, not by accuracy.",
+    features: [
+      "Night-time fraud rate 13.2% vs about 0.5% in the daytime. Online international transactions are 26.3% fraud",
+      "Two transactions within 10 minutes of each other are fraud 90% of the time (SQL LAG)",
+      "Travel, electronics and jewelry cause 78% of the dollar loss (Pareto with window functions)",
+      "On the unseen last quarter the model caught 89% of fraud and saved about $120K net, roughly double the best single rule",
+    ],
+    metrics: [
+      { label: "Transactions analysed", value: "119,480" },
+      { label: "SQL queries written", value: "11" },
+      { label: "PR-AUC (test)", value: "0.89" },
+      { label: "Fraud caught (recall)", value: "89%" },
+    ],
+    stack: ["Python", "Pandas", "SQL", "scikit-learn", "Tableau"],
+    github: "https://github.com/HarshAntil2004/Credit-Card-Fraud-Analysis",
+    demo: null,
+    featured: true,
+  },
+  {
     slug: "retail-analytics",
     title: "Customer Shopping Trends — Retail Analytics",
     summary:
